@@ -1,16 +1,10 @@
-import java.awt.*;
-import javax.swing.*;
-
 public class Main {
     public static void main(String[] args) {
-        JFrame frame = new JFrame() {
-            public void paint(Graphics g) {
-                g.drawString("Hello, World!", 110, 150);
-                g.drawOval(100,130,90,30);
-            }
-        };
-        frame.setSize(300,300);
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setVisible(true);
+        double price = 50;
+        double vat = price * 7 /100;
+
+        double totalPrice = price + vat;
+
+        System.out.println("Price include VAT is =  " + totalPrice);
     }
 }
