@@ -1,49 +1,28 @@
+import java.util.Scanner;
+
 public class Main {
+    static double calculateFuelConsumption(double length, double litter) {
+        return  length/litter;
+    }
+
     public static void main(String[] args) {
 
-        final double VAT_RATE = 1.07;
+        /*
+        1. เจ้าของรถคันหนึ่งสังเกตว่าเขาขับรถของเขาไปได้ไกล 300 กิโลเมตร โดยใช้น้ำมัน 20 ลิตร เขาอยากทราบรถของเขากินน้ำมันกี่กิโลลิตร
+        ให้เติมคำสั่งที่มีการคำนวณลงไปในช่องว่างของ โปรแกรม calculateFuelConsumption เพื่อคำนวณอัตราการใช้น้ำมันรถคันนั้น
+        */
 
-        double tvPrice = 10000;
-        double dvdPrice = 600;
-        double cdPrice = 200;
+        Scanner sc = new Scanner(System.in);
 
-        double totalTVPrice = tvPrice * VAT_RATE;
-        double totalDVDPrice = dvdPrice * VAT_RATE;
-        double totalCDPrice = cdPrice * VAT_RATE;
+        System.out.print("Enter the distance traveled (in kilometers): ");
+        double distance = sc.nextDouble();
 
-        System.out.print("TV Price include VAT is : ");
-        System.out.println(totalTVPrice);
+        System.out.print("Enter the amount of fuel used (in liters): ");
+        double fuel = sc.nextDouble();
 
-        System.out.print("DVD Price include VAT is : ");
-        System.out.println(totalDVDPrice);
-
-        System.out.print("CD Price include VAT is : ");
-        System.out.println(totalCDPrice);
-
-
-//        double tvPrice = 10000;
-//        double dvdPrice = 600;
-//        double cdPrice = 200;
-//
-//        double totalTVPrice = tvPrice + (tvPrice * 0.07);
-//        double totalDVDPrice = dvdPrice + (dvdPrice * 0.07);
-//        double totalCDPrice = cdPrice + (cdPrice * 0.07);
-//
-//        System.out.print("TV Price include VAT is : ");
-//        System.out.println(totalTVPrice);
-//
-//        System.out.print("DVD Price include VAT is : ");
-//        System.out.println(totalDVDPrice);
-//
-//        System.out.print("CD Price include VAT is : ");
-//        System.out.println(totalCDPrice);
-
-
-        // NOTE:
-        // = a + ( a * 0.07 )
-        // = a (1+(1 * 0.07))
-        // = a (1+(0.07))
-        // = a * 1.07
+        double kmPerLiter = calculateFuelConsumption(distance, fuel);
+        System.out.println("The fuel consumption rate of your car is: " + kmPerLiter + " kilometers per liter");
 
     }
+
 }
