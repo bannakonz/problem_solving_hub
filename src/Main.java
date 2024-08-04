@@ -1,25 +1,24 @@
 import java.util.Scanner;
 
 public class Main {
-
-    static int sumOfFirstNaturalNumber(int n) {
-//        int sum = n;
-//        for (int i = n - 1; i >= 1; i--) {
-//            sum += i;
-//        }
-//        return sum;
-        return n*(n+1)/2;
+    static int exponentCalculate(int base, int exponent) {
+        int count = exponent;
+        int sum = 1;
+        while (count > 0) {
+            sum*=base;
+            count--;
+        }
+        return sum;
     }
 
-
-    public static void main(String[] args) {
-
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter Number : ");
-        int n = sc.nextInt();
-        int sum = sumOfFirstNaturalNumber(n);
-        System.out.println("sum = " + sum);
-
+        System.out.print("Enter Base Number : ");
+        int base = sc.nextInt();
+        System.out.print("Enter Exponent Number : ");
+        int exp = sc.nextInt();
+        int result = exponentCalculate(base,exp);
+        System.out.println("Result = " + result);
     }
 
 }
