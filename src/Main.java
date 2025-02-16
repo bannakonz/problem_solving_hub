@@ -7,12 +7,8 @@ public class Main {
         int n = sc.nextInt();
 
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n; j++) {
-                if (j >= i) {
-                    System.out.print("X");
-                } else {
-                    System.out.print(" ");
-                }
+            for (int j = n; j >= i; j--) {
+                System.out.print("X");
             }
             System.out.println();
         }
@@ -23,7 +19,8 @@ public class Main {
 
 // Enter number: 5
 // XXXXX
-//  XXXX
-//   XXX
-//    XX
-//     X
+// XXXX
+// XXX
+// XX
+// X
+
